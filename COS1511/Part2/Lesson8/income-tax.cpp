@@ -20,7 +20,7 @@ int main()
   };
   taxPayable = salary * tax;
 
-  cout << "Tax payable on salary is: R " << taxPayable;
+  cout << "Tax payable on salary is: R " << taxPayable << endl;
 
   return 0;
 }
