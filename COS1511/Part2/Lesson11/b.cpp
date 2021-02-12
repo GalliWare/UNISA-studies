@@ -43,8 +43,7 @@ int BooksSolution()
   return 0;
 }
 
-int main()
+void main()
 {
   BooksSolution();
-  return 0;
 }
