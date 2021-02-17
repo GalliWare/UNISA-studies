@@ -1,4 +1,5 @@
 //What does it do?
+// gets the cubed root of a number
 #include <iostream>
 using namespace std;
 
