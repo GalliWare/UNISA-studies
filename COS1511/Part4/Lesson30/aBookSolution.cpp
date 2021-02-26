@@ -1,16 +1,20 @@
 // Processes a banking account and displays a monthly statement
 #include <iostream>
 using namespace std;
+
 const float DEPOSIT_FEE = 1.00;
 const float BALANCE_FEE = 0.50;
 const float WITHDRAWAL_FEE = 1.50;
 const float OVERDRAWN_FEE = 5.00;
+
 struct Transaction
 {
   char type;
   float amount;
 };
+
 const int MAX_TRANSACT = 30;
+
 class Account
 {
 public:
@@ -26,12 +30,14 @@ private:
   int numTransacts;
   float feeTotal;
 };
+
 Account::Account()
 {
   balance = 0;
   numTransacts = 0;
   feeTotal = 0;
 }
+
 void Account::deposit(float a)
 {
   balance += a;
@@ -41,6 +47,7 @@ void Account::deposit(float a)
   transacts[numTransacts].amount = a;
   numTransacts++;
 }
+
 float Account::balanceEnquiry()
 {
   feeTotal += BALANCE_FEE;
@@ -50,6 +57,7 @@ float Account::balanceEnquiry()
   numTransacts++;
   return balance;
 }
+
 void Account::withdrawal(float a)
 {
   balance -= a;
@@ -67,6 +75,7 @@ void Account::withdrawal(float a)
   transacts[numTransacts].amount = a;
   numTransacts++;
 }
+
 void Account::displayStatement() const
 {
   cout << endl
@@ -91,14 +100,17 @@ void Account::displayStatement() const
   cout << "---------------------------------" << endl;
   cout << "Closing balance\tR" << balance << endl;
 }
+
 int main()
 {
   Account account1;
   char type;
   float amount;
+
   cout << "Enter the transactions for the month" << endl;
   cout << "(D)eposit, (B)alance enquiry, (W)ithdrawal, E(X)it:" << endl;
   cin >> type;
+
   while (toupper(type) != 'X')
   {
     switch (toupper(type))
@@ -117,7 +129,10 @@ int main()
     }
     cin >> type;
   }
+
   cout << endl;
+
   account1.displayStatement();
+
   return 0;
 }
