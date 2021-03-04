@@ -5,20 +5,20 @@ using namespace std;
 
 const int MAX_TRANSACTIONS = 100;
 
+const float DEPOSIT_FEE = 1.00,
+            WITHDRAWAL_FEE = 1.50,
+            OVERDRAWN_FEE = 5.00,
+            BALANCE_FEE = 0.50;
+
+struct transaction
+{
+  string type;
+  float value;
+  float fees;
+};
+
 class BankAccount
 {
-  const float DEPOSIT_FEE = 1.00,
-              WITHDRAWAL_FEE = 1.50,
-              OVERDRAWN_FEE = 5.00,
-              BALANCE_FEE = 0.50;
-
-  struct transaction
-  {
-    string type;
-    float value;
-    float fees;
-  };
-
 public:
   void deposit(int inputValue);
   void withdrawal(int value);
