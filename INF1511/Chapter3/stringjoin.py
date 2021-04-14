@@ -1,0 +1,5 @@
+p = input("Enter a string: ")
+q = input("Enter another string: ")
+print("The first sting is: %s" % p)
+print("The second sting is: %s" % q)
+print("The combination is: %s" % p.join(q))
