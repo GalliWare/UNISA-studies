@@ -22,7 +22,7 @@ class BankAccount
 public:
   void deposit(int inputValue);
   void withdrawal(int value);
-  void balanceEquiry();
+  void balanceEnquiry();
   void statement();
 
 private:
@@ -60,7 +60,7 @@ void BankAccount::withdrawal(int value)
   }
 }
 
-void BankAccount::balanceEquiry()
+void BankAccount::balanceEnquiry()
 {
   transactions[transactionNumber].type = "Balance Equiry";
   transactions[transactionNumber].value = balance;
@@ -100,7 +100,7 @@ int main()
   string inputStore;
 
   cout << "Enter the transactions for the month" << endl;
-  cout << "(B)alance Equiry, (D)eposits, (W)ithdrawals, E(X)it:" << endl;
+  cout << "(B)alance Enquiry, (D)eposits, (W)ithdrawals, E(X)it:" << endl;
 
   do
   {
@@ -117,7 +117,7 @@ int main()
     }
     else if (transactionCode == 'B')
     {
-      account.balanceEquiry();
+      account.balanceEnquiry();
     }
     else if (transactionCode != 'X')
       cout << transactionCode << " is not a valid code, please use B,D,W or X to exit. " << endl;
