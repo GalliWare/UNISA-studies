@@ -12,7 +12,7 @@ int main()
   cout << "-------------------" << endl;
 
   // get inputs
-  cout << "Repetitiions?  ";
+  cout << "Repetitions?  ";
   cin >> repetitions;
   cout << "Message? ";
   cin.get();

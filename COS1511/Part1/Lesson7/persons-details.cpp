@@ -22,7 +22,7 @@ int main()
   // join the name to a new arrangement
   rearrangedName = lastName + ", " + title + ", " + firstName[0] + ".";
 
-  // output rearanged name
+  // output rearranged name
   cout << rearrangedName;
 
   return 0;
