@@ -29,8 +29,6 @@ int main()
   out.precision(2);
 
   // use a while loop to run each line
-  // TODO: see if we can loop in the loop till the line break, would make the program more flexable for input
-  // TODO: find wait to remove white space line at the end of output
   while (in >> subject >> contribution1 >> mark1 >> contribution2 >> mark2)
   {
     // calculate mark
